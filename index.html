@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>لالاس کاپیتەل | Lalas Group</title>
+<meta name="description" content="لالاس کاپیتەل – خزمەتگوزاری، دامەزراندن و بەهێزکرن، سەخبێری، سیستەم و سەرمایەداری.">
+<meta name="theme-color" content="#071a36">
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;800&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--n0:#050f22;--n1:#071a36;--n2:#0e2a52;--n3:#17407a;--g:#c9a648;--g2:#ecd48a;--g3:#8a6d22;--paper:#f7f5ef;--ink:#1d2b45;--mut:#6a758a;--line:#e6dfca;
+--h:"Noto Kufi Arabic","Segoe UI",Tahoma,sans-serif;--b:"Noto Naskh Arabic","Segoe UI",Tahoma,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--b);background:var(--paper);color:var(--ink);line-height:2;font-size:18px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--h);line-height:1.55;color:var(--n1)}
+a{color:inherit;text-decoration:none}
+svg.i{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+:focus-visible{outline:3px solid var(--g);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+
+/* NAV */
+header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0);transition:.3s}
+header.s{background:rgba(5,15,34,.88);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(201,166,72,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-family:var(--h);font-weight:800}
+.brand img{width:48px;height:48px;border-radius:50%;box-shadow:0 0 0 2px rgba(201,166,72,.6)}
+.links{display:flex;align-items:center;gap:30px;font-family:var(--h);font-size:15px;color:#cfd7e8}
+.links a:not(.cta){padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+.links a:not(.cta):hover{color:var(--g2);border-color:var(--g)}
+.cta{background:linear-gradient(135deg,var(--g2),var(--g));color:var(--n0);padding:9px 22px;border-radius:999px;font-weight:800}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.35);border-radius:10px;width:46px;height:46px;color:#fff;font-size:22px;cursor:pointer}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:grid;align-items:center;color:#fff;overflow:hidden;padding:130px 0 90px;
+background:radial-gradient(900px 600px at 85% 20%,rgba(23,64,122,.9),transparent 70%),radial-gradient(700px 500px at 5% 95%,rgba(201,166,72,.18),transparent 70%),linear-gradient(160deg,var(--n1),var(--n0))}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 70% 40%,#000 0,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 0,transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--h);font-size:14px;color:var(--g2);border:1px solid rgba(201,166,72,.5);padding:6px 18px;border-radius:999px;background:rgba(201,166,72,.08);margin-bottom:26px}
+.tag:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--g);box-shadow:0 0 0 4px rgba(201,166,72,.25)}
+.hero h1{color:#fff;font-size:clamp(36px,5.6vw,72px);font-weight:800;line-height:1.4;letter-spacing:-.01em}
+.hero p{color:#bdc8de;font-size:20px;max-width:32em;margin:22px 0 38px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:var(--h);font-weight:800;font-size:16px;padding:15px 32px;border-radius:999px;transition:.25s;display:inline-flex;align-items:center;gap:10px}
+.btn.f{background:linear-gradient(135deg,var(--g2),var(--g));color:var(--n0);box-shadow:0 12px 30px -10px rgba(201,166,72,.7)}
+.btn.f:hover{transform:translateY(-3px)}
+.btn.o{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn.o:hover{border-color:var(--g);color:var(--g2)}
+
+.stage{position:relative;aspect-ratio:1;display:grid;place-items:center}
+.stage .logo{width:62%;border-radius:50%;position:relative;z-index:2;box-shadow:0 0 0 6px rgba(201,166,72,.25),0 0 90px 10px rgba(23,64,122,.8),0 40px 80px rgba(0,0,0,.6);animation:in 1.2s cubic-bezier(.2,.7,.2,1) both}
+.orb{position:absolute;border-radius:50%;border:1px solid rgba(201,166,72,.4)}
+.o1{inset:9%;border-style:dashed;animation:sp 70s linear infinite}
+.o2{inset:-2%;border-color:rgba(255,255,255,.12);animation:sp 110s linear infinite reverse}
+.o1:after,.o2:after{content:"";position:absolute;top:-6px;left:50%;width:12px;height:12px;border-radius:50%;background:var(--g);box-shadow:0 0 18px var(--g)}
+.chip{position:absolute;z-index:3;font-family:var(--h);font-size:14px;font-weight:600;color:#fff;padding:9px 18px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);display:flex;gap:8px;align-items:center;animation:fl 6s ease-in-out infinite}
+.chip svg{width:18px;height:18px;color:var(--g2)}
+.c1{top:6%;right:-2%}.c2{top:40%;left:-6%;animation-delay:-2s}.c3{bottom:8%;right:4%;animation-delay:-4s}
+@keyframes sp{to{transform:rotate(360deg)}}
+@keyframes fl{50%{transform:translateY(-12px)}}
+@keyframes in{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
+
+/* MARQUEE */
+.mq{background:linear-gradient(90deg,var(--g3),var(--g),var(--g2),var(--g),var(--g3));color:var(--n0);font-family:var(--h);font-weight:800;overflow:hidden;white-space:nowrap;padding:14px 0}
+.mq div{display:inline-block;animation:mq 40s linear infinite}
+.mq span{margin:0 22px}.mq span:after{content:"◆";margin-right:44px;font-size:10px;opacity:.6}
+@keyframes mq{to{transform:translateX(50%)}}
+
+section{padding:110px 0;position:relative}
+.head{max-width:44em;margin-bottom:56px}
+.head h2{font-size:clamp(28px,3.8vw,46px);font-weight:800}
+.head p{color:var(--mut);margin-top:10px}
+.head:after{content:"";display:block;width:84px;height:4px;margin-top:20px;border-radius:2px;background:linear-gradient(90deg,var(--g),var(--g2))}
+
+/* SERVICES bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px 32px 30px;box-shadow:0 24px 60px -36px rgba(7,26,54,.4);transition:.35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 34px 70px -34px rgba(7,26,54,.55);border-color:var(--g)}
+.card:nth-child(1){grid-column:span 4}.card:nth-child(2){grid-column:span 2}
+.card:nth-child(3){grid-column:span 2}.card:nth-child(4){grid-column:span 2}.card:nth-child(5){grid-column:span 2}
+.card .num{position:absolute;left:22px;top:6px;font-family:var(--h);font-size:84px;font-weight:800;color:rgba(7,26,54,.05);line-height:1}
+.ic{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--n2),var(--n1));color:var(--g2);margin-bottom:20px;box-shadow:0 10px 24px -10px rgba(7,26,54,.8)}
+.card h3{font-size:21px;font-weight:800;margin-bottom:8px}
+.card ul{list-style:none;margin-top:10px}
+.card li{position:relative;padding:5px 24px 5px 0;font-size:17px;border-bottom:1px dashed var(--line)}
+.card li:last-child{border:0}
+.card li:before{content:"";position:absolute;right:2px;top:17px;width:9px;height:9px;background:var(--g);transform:rotate(45deg)}
+.card.dk{background:linear-gradient(160deg,var(--n2),var(--n0));color:#cdd6e8;border-color:transparent}
+.card.dk h3{color:#fff}.card.dk .num{color:rgba(255,255,255,.06)}
+.card.dk li{border-color:rgba(255,255,255,.12)}
+.card.dk .ic{background:linear-gradient(135deg,var(--g2),var(--g));color:var(--n0)}
+.note{display:inline-block;font-family:var(--h);font-size:14px;line-height:1.9;background:#fbf3d9;color:#6b5110;border:1px solid var(--g);padding:3px 16px;border-radius:12px;margin:2px 0 6px}
+.card.dk .note{background:rgba(201,166,72,.15);color:var(--g2)}
+
+/* MANAGER */
+.dark{background:linear-gradient(170deg,var(--n1),var(--n0));color:#cfd7e8;overflow:hidden}
+.dark:before{content:"";position:absolute;width:700px;height:700px;left:-250px;top:-200px;background:radial-gradient(circle,rgba(23,64,122,.7),transparent 65%)}
+.dark .wrap{position:relative}
+.dark h2{color:#fff}.dark .head p{color:#9fb0cf}
+.mgr{display:grid;grid-template-columns:1.35fr .65fr;gap:56px;align-items:start}
+.duties{list-style:none;counter-reset:d;position:relative}
+.duties:before{content:"";position:absolute;right:21px;top:20px;bottom:20px;width:2px;background:linear-gradient(var(--g),rgba(201,166,72,.1))}
+.duties li{counter-increment:d;position:relative;padding:14px 72px 14px 10px;margin-bottom:6px;border-radius:16px;transition:.25s}
+.duties li:hover{background:rgba(255,255,255,.06)}
+.duties li:before{content:counter(d,arabic-indic);position:absolute;right:0;top:12px;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--g2),var(--g));color:var(--n0);font-family:var(--h);font-weight:800;box-shadow:0 0 0 6px var(--n1)}
+.person{position:sticky;top:110px;text-align:center;padding:44px 28px;border-radius:30px;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border:1px solid rgba(201,166,72,.45);backdrop-filter:blur(10px)}
+.person img{width:110px;height:110px;border-radius:50%;box-shadow:0 0 0 4px rgba(201,166,72,.5);margin-bottom:18px}
+.person span{display:block;color:var(--g2);font-family:var(--h);font-size:15px}
+.person strong{display:block;color:#fff;font-family:var(--h);font-size:28px;font-weight:800;margin-top:6px}
+
+/* CONTACT */
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ct{display:flex;flex-direction:column;align-items:flex-start;gap:6px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:32px;box-shadow:0 24px 60px -36px rgba(7,26,54,.4);transition:.3s}
+.ct:hover{transform:translateY(-6px);border-color:var(--g)}
+.ct small{font-family:var(--h);color:var(--mut);font-size:14px}
+.ct b{font-family:var(--h);font-size:19px;color:var(--n1);direction:ltr;unicode-bidi:plaintext;word-break:break-all}
+.ct.empty b{color:#a9b1c0;font-weight:400;border-bottom:2px dashed var(--line);direction:rtl}
+
+footer{background:var(--n0);color:#8a97b2;text-align:center;padding:44px 0 calc(44px + env(safe-area-inset-bottom,0));font-size:15px}
+footer img{width:64px;height:64px;border-radius:50%;margin-bottom:10px;box-shadow:0 0 0 2px rgba(201,166,72,.5)}
+footer b{display:block;color:#fff;font-family:var(--h);font-size:18px}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.rv.on{opacity:1;transform:none}
+
+@media(max-width:960px){
+ .hero .wrap,.mgr{grid-template-columns:1fr}
+ .stage{max-width:340px;margin:0 auto;order:-1}
+ .bento{grid-template-columns:1fr 1fr}
+ .card:nth-child(n){grid-column:span 2}
+ .cg{grid-template-columns:1fr}
+ .person{position:static}
+ section{padding:72px 0}
+ .burger{display:block}
+ .links{display:none;position:absolute;top:100%;right:0;left:0;flex-direction:column;align-items:stretch;gap:0;background:var(--n0);padding:6px 20px 18px;border-bottom:2px solid var(--g)}
+ .links.open{display:flex}
+ .links a:not(.cta){padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+ .cta{text-align:center;margin-top:14px}
+ .c2{left:0}.c1{right:0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/></symbol>
+ <symbol id="build" viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13M9 21v-6h6v6"/></symbol>
+ <symbol id="pencil" viewBox="0 0 24 24"><path d="M3 21l1-4L16 5l3 3L7 20zM14 7l3 3"/></symbol>
+ <symbol id="monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+ <symbol id="trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+ <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+ <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+ <symbol id="insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></symbol>
+</svg>
+
+<header id="hd">
+ <div class="wrap nav">
+  <a class="brand" href="#top"><img src="logo.png" alt="لوگویێ لالاس گروپ"><span>لالاس کاپیتەل</span></a>
+  <button class="burger" id="bg" aria-label="مینۆیا" aria-expanded="false">☰</button>
+  <nav class="links" id="lk">
+   <a href="#top">سەرەکی</a><a href="#services">خزمەتگوزاری</a><a href="#manager">رۆلێ رێڤەبەری</a><a class="cta" href="#contact">پەیوەندی</a>
+  </nav>
+ </div>
+</header>
+
+<main id="top">
+<div class="hero">
+ <div class="wrap">
+  <div>
+   <span class="tag">لالاس گروپ</span>
+   <h1>لالاس کاپیتەل</h1>
+   <p>ژ دامەزراندنا کۆمپانیا و پرۆژەیان حەتا بەهێزکرن، پرێڤەبرن، سیستەم و سەرمایەداری.</p>
+   <div class="btns"><a class="btn f" href="#services">خزمەتگوزاریێن مە</a><a class="btn o" href="#contact">پەیوەندیێ بکە</a></div>
+  </div>
+  <div class="stage">
+   <div class="orb o2"></div><div class="orb o1"></div>
+   <img class="logo" src="logo.png" alt="لوگویێ لالاس گروپ">
+   <div class="chip c1"><svg class="i"><use href="#briefcase"/></svg>پرێڤەبرن</div>
+   <div class="chip c2"><svg class="i"><use href="#monitor"/></svg>سیستەم</div>
+   <div class="chip c3"><svg class="i"><use href="#trend"/></svg>سەرمایەداری</div>
+  </div>
+ </div>
+</div>
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="services">
+ <div class="wrap">
+  <div class="head rv"><h2>رۆلێ لالاس کاپیتەل</h2><p>پێنج بوارێن سەرەکی یێن کاری.</p></div>
+  <div class="bento">
+   <article class="card dk rv"><span class="num">١</span><div class="ic"><svg class="i"><use href="#briefcase"/></svg></div>
+    <h3>عەرزکرنا خزمەتێن لالاس کاپیتەل</h3>
+    <ul><li>پرێڤەبرنا سۆشیال میدیایا کۆمپانیا و پرۆژەیان</li><li>پرێڤەبرنا کاری ئیداری یێ کۆمپانیا و پرۆژەیان</li><li>پرێڤەبرنا بازاڕگەریا کۆمپانیا و پرۆژەیان</li><li>پرێڤەبرنا مامەلەیێن یاسایی یێن پرۆژە و کۆمپانیان</li></ul></article>
+   <article class="card rv"><span class="num">٢</span><div class="ic"><svg class="i"><use href="#build"/></svg></div>
+    <h3>دامەزراندن و بەهێزکرن</h3><span class="note">هەر ژ سفری حەتا رادەستکرنا کاری پشتی بۆری شەش هەیڤان ژ کاری</span>
+    <ul><li>دامەزراندنا کۆمپانیان</li><li>دامەزراندنا پرۆژەیان</li><li>دامەزراندن و ئاڤاکرنا هەر بابەتەکێ بازرگانی</li><li>بەهێزکرنا کۆمپانی و پرۆژەیان</li><li>بەهێزکرنا بازاڕان</li></ul></article>
+   <article class="card rv"><span class="num">٣</span><div class="ic"><svg class="i"><use href="#pencil"/></svg></div>
+    <h3>سەخبێری</h3>
+    <ul><li>دیزاینکرن و ئاڤاکرنا خانی و ئاڤاهیان</li><li>سەخبێریکرنا هەمی بابەتێن کارگوزارایی یێن خانی، کۆمپانیا و پرۆژەیان</li></ul></article>
+   <article class="card rv"><span class="num">٤</span><div class="ic"><svg class="i"><use href="#monitor"/></svg></div>
+    <h3>سیستەم</h3>
+    <ul><li>دانانا سیستەمێن کامیران</li><li>دانانا سیستەمێن کاشێری</li><li>دانانا سیستەمان بۆ بابەتێن (IT)</li></ul></article>
+   <article class="card dk rv"><span class="num">٥</span><div class="ic"><svg class="i"><use href="#trend"/></svg></div>
+    <h3>سەرمایەداری</h3>
+    <ul><li>سەرمایەکرنا پشکان دناڤا پرۆژەیان دا</li><li>سەرمایەکرنا سەهمان د پرۆژە و کۆمپانیان دا</li><li>بکارئینانا دراوی د کارێن نوی و بازرگانیا گشتی دا</li><li>سەرمایەکرنا دراوی ب گشتی</li></ul></article>
+  </div>
+ </div>
+</section>
+
+<section id="manager" class="dark">
+ <div class="wrap">
+  <div class="head rv"><h2>رۆلێ رێڤەبەرێ لالاس کاپیتەل</h2><p>ئەرکێن سەرەکی یێن رێڤەبەری.</p></div>
+  <div class="mgr">
+   <ol class="duties rv">
+    <li>عەرزکرنا خزمەتێن لالاس کاپیتەل ب بەردەوامی.</li>
+    <li>مقابەلە دگەل ئەو کەسێن دناڤا لالاس کاپیتال دێ کارکەن.</li>
+    <li>داتاکرنا هەمی بابەتێن دناڤا ئەڤێ پرۆسەیێ دا.</li>
+    <li>پرێڤەبرنا سۆشیال میدیایا لالاس کاپیتەل.</li>
+    <li>پرێڤەبرنا نوینەرێن لالاس کاپیتەل د بازاڕێدا.</li>
+    <li>دروستکرنا محتەوای و کاری بۆ بابەتێن سۆشیال میدیا و کاری ب گشتی.</li>
+    <li>مقابەلە دگەل خودان کۆمپانیا، پرۆژە و بازاڕکەران بۆ وەرگرتن و پرێڤەبرنا پرۆژەیان.</li>
+   </ol>
+   <aside class="person rv"><img src="logo.png" alt=""><span>رێڤەبەرێ لالاس کاپیتەل</span><strong>عبدالرحمان صباح</strong></aside>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <div class="head rv"><h2>پەیوەندیێ دگەل مە بکە</h2><p>ب ڤان رێکان دگەل لالاس کاپیتەل د پەیوەندیێ دا بە.</p></div>
+  <div class="cg">
+   <a class="ct rv" id="c-phone"><div class="ic"><svg class="i"><use href="#phone"/></svg></div><small>هژمارا تەلەفونێ</small><b></b></a>
+   <a class="ct rv" id="c-mail"><div class="ic"><svg class="i"><use href="#mail"/></svg></div><small>جیمیل</small><b></b></a>
+   <a class="ct rv" id="c-insta"><div class="ic"><svg class="i"><use href="#insta"/></svg></div><small>ئینستاگرام</small><b></b></a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><img src="logo.png" alt=""><b>لالاس گروپ</b><span>© <span id="yr"></span> لالاس کاپیتەل. هەمی مافان پارێزراوە.</span></div></footer>
+
+<script>
+/* ===== زانیاریێن پەیوەندیێ ل ڤێرە بنڤیسە / Edit contact info here ===== */
+const CONTACT = {
+  phone:     "",   // نموونە: "+964 750 000 0000"
+  email:     "",   // نموونە: "name@gmail.com"
+  instagram: ""    // نموونە: "lalas.capital"
+};
+/* ======================================================================= */
+function fill(id,val,href,show){
+  const a=document.getElementById(id),b=a.querySelector('b');
+  if(val){b.textContent=show||val;a.href=href;a.target='_blank';a.rel='noopener'}
+  else{b.textContent='ل ڤێرە دێ هێتە نڤیسین';a.classList.add('empty');a.removeAttribute('href')}
+}
+const ph=CONTACT.phone.replace(/[^\d+]/g,''),ig=CONTACT.instagram.replace(/^@/,'');
+fill('c-phone',CONTACT.phone,'tel:'+ph);
+fill('c-mail',CONTACT.email,'mailto:'+CONTACT.email);
+fill('c-insta',ig,'https://instagram.com/'+ig,'@'+ig);
+
+const items=['پرێڤەبرن','دامەزراندن و بەهێزکرن','سەخبێری','سیستەم','سەرمایەداری'];
+const row=items.map(t=>'<span>'+t+'</span>').join('');
+document.getElementById('mq').innerHTML=row.repeat(6);
+
+const hd=document.getElementById('hd');
+const sc=()=>hd.classList.toggle('s',scrollY>30);sc();addEventListener('scroll',sc,{passive:true});
+const bg=document.getElementById('bg'),lk=document.getElementById('lk');
+bg.onclick=()=>{const o=lk.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+lk.onclick=e=>{if(e.target.closest('a')){lk.classList.remove('open');bg.setAttribute('aria-expanded',false)}};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
